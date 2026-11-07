@@ -15,8 +15,14 @@ A static portfolio built with plain HTML, CSS, and JavaScript. There is no build
 ├── certifications.html Certificates and recognition
 ├── media.html          Press, podcast, and video
 ├── contact.html        Contact form and direct links
+├── blog.html           Firebase-powered public blog
+├── admin.html          Firebase-authenticated blog publisher
 ├── style.css           Shared styling and responsive layouts
 ├── main.js             Navigation, reveal effects, counters, contact form
+├── blog.js             Firestore blog reader
+├── admin.js            Firebase Auth and Firestore publisher
+├── firebase-config.js  Firebase web app settings
+├── firestore.rules     Firestore access rules
 ├── videos/             Local video clips
 │   └── shorts/         Add future short clips here (see README.txt)
 ├── assets/images/      Portfolio photos and media stills
@@ -41,6 +47,21 @@ The Certificates page displays seven PNG scans extracted from the portfolio PDF,
 ## Editing content
 
 Content is written directly into each HTML page (not pulled from a database), so to change text: open the relevant `.html` file in any text editor and edit it directly. Colors, fonts, and spacing all live in `style.css` — change the values at the top (`:root { --accent: ... }`) to restyle the whole site at once.
+
+## Turning on the Firebase blog
+
+The blog uses Cloud Firestore and Firebase Email/Password Authentication without a build step:
+
+1. In the [Firebase Console](https://console.firebase.google.com/), create a project and register a **Web app**.
+2. Copy the web app configuration into `firebase-config.js`, replacing every `YOUR_...` value.
+3. Create a Firestore database in production mode. In **Firestore → Rules**, paste the contents of `firestore.rules` and publish them.
+4. In **Authentication → Sign-in method**, enable **Email/Password**, then create your author account under **Users**. Copy that user's **UID**.
+5. In **Firestore → Data**, create a collection named `admins` and a document whose document ID is exactly that user's UID. It can contain a field such as `email` with your email address.
+6. Serve the `public` folder through a local/static web server (for example `npx serve public`), open `admin.html`, sign in, and publish posts. The public posts appear on `blog.html`.
+
+Only users with a document in `admins/{their-user-uid}` can publish, edit, or delete posts. The public site only reads documents where `published` is `true`. Do not put Firebase Admin SDK credentials in this folder.
+
+The admin studio at `admin.html` supports rich formatting, headings, fonts, text color/highlighting, alignment, lists, quotes, code, links, YouTube/Vimeo embeds, Cloudinary images/video/audio, tables, drafts, cloud autosave and browser recovery, preview, focus mode, word goals, an article outline, SEO fields, featured posts, editing, and deletion. The sign-in screen can send a Firebase password reset email. The public `blog.html` page supports search, category filtering, and load-more pagination; `post.html?id=...` renders the full post with sharing and related posts.
 
 ## Turning on the contact form
 

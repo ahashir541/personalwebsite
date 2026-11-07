@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog Studio — Syed Hashir Ali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="index.html">SYED HASHIR <span>ALI</span></a><a class="text-link" href="blog.html">View blog ↗</a></div></nav>
+<main><section class="page-hero"><div class="wrap"><div class="eyebrow">Private publishing</div><h1>Blog<br><span>studio.</span></h1><p>Create polished, media-rich posts. Only approved Firebase administrators can access this workspace.</p></div></section>
+<section><div class="wrap admin-layout">
+  <div id="auth-panel" class="admin-card"><h2>Sign in</h2><p class="admin-help">Use your Firebase Email/Password account.</p><form id="login-form" class="contact-form"><input id="login-email" type="email" placeholder="Email address" autocomplete="username" required><input id="login-password" type="password" placeholder="Password" autocomplete="current-password" required><button class="btn btn-primary" type="submit">Sign in</button></form><button id="reset-password-button" class="text-button" type="button">Forgot password? Send a reset email</button></div>
+  <div id="studio-panel" hidden>
+    <div class="studio-nav"><div class="studio-nav__brand"><span class="studio-mark">H<span>.</span></span><div><strong>Publisher desk</strong><small>Personal website</small></div></div><div class="studio-nav__links"><span class="studio-nav__link studio-nav__link--active">Writing</span><a class="studio-nav__link" href="blog.html">Published blog</a><a class="studio-nav__link" href="index.html">Website</a></div></div>
+    <div class="studio-stats"><div><span>Total posts</span><strong id="stat-total">0</strong></div><div><span>Published</span><strong id="stat-published">0</strong></div><div><span>Drafts</span><strong id="stat-drafts">0</strong></div><div><span>Featured</span><strong id="stat-featured">0</strong></div></div>
+    <div class="admin-toolbar"><div><div class="eyebrow">Editor</div><h2 id="editor-heading">New post</h2></div><div class="admin-toolbar__actions"><a class="btn btn-outline" href="blog.html">View blog</a><button id="logout-button" class="btn btn-outline" type="button">Sign out</button></div></div>
+    <div class="studio-grid">
+      <form id="post-form" class="admin-card">
+        <div class="editor-toolbar" role="toolbar" aria-label="Formatting tools">
+          <select data-command="formatBlock" aria-label="Heading level"><option value="p">Paragraph</option><option value="h1">Heading 1</option><option value="h2">Heading 2</option><option value="h3">Heading 3</option><option value="h4">Heading 4</option><option value="h5">Heading 5</option><option value="h6">Heading 6</option><option value="pre">Code block</option></select>
+          <select data-command="fontName" aria-label="Font family"><option value="Poppins">Poppins</option><option value="Georgia">Georgia</option><option value="Arial">Arial</option><option value="Courier New">Mono</option></select>
+          <select data-command="fontSize" aria-label="Font size"><option value="3">Normal</option><option value="2">Small</option><option value="4">Large</option><option value="5">XL</option><option value="6">XXL</option></select>
+          <button type="button" data-command="bold" title="Bold"><b>B</b></button><button type="button" data-command="italic" title="Italic"><i>I</i></button><button type="button" data-command="underline" title="Underline"><u>U</u></button><button type="button" data-command="strikeThrough" title="Strikethrough"><s>S</s></button>
+          <label title="Text color">A <input data-command="foreColor" type="color" value="#f4f6f0" aria-label="Text color"></label><label title="Highlight">H <input data-command="hiliteColor" type="color" value="#b9f26a" aria-label="Highlight color"></label>
+          <button type="button" data-command="justifyLeft" title="Align left">≡</button><button type="button" data-command="justifyCenter" title="Center">≡</button><button type="button" data-command="justifyRight" title="Align right">≡</button><button type="button" data-command="justifyFull" title="Justify">☰</button>
+          <button type="button" data-command="insertUnorderedList" title="Bullet list">• List</button><button type="button" data-command="insertOrderedList" title="Numbered list">1. List</button><button type="button" data-command="formatBlock" data-value="blockquote" title="Quote">Quote</button><button type="button" data-command="formatBlock" data-value="pre" title="Code">Code</button><button type="button" data-command="insertHorizontalRule" title="Divider">―</button>
+          <button type="button" id="link-button" title="Insert link">Link</button><button type="button" id="image-button" title="Insert image">Image</button><button type="button" id="video-button" title="Insert video">Video</button><button type="button" id="audio-button" title="Insert audio">Audio</button><button type="button" id="table-button" title="Insert table">Table</button>
+        </div>
+        <div id="content-editor" class="rich-editor" contenteditable="true" role="textbox" aria-label="Post content" data-placeholder="Start writing your story…"></div>
+        <input id="media-file" type="file" hidden accept="image/jpeg,image/png,image/webp,video/mp4,video/webm,audio/mpeg,audio/wav,audio/ogg">
+        <div class="editor-status"><span id="save-status">Not saved</span><span id="word-count">0 words</span></div>
+        <div class="writing-tools"><label>Writing goal <input id="word-goal" type="number" min="100" max="10000" step="100" value="800"> words</label><progress id="word-goal-progress" max="800" value="0"></progress><span id="word-goal-label">0 / 800 words</span><button id="focus-mode-button" class="btn btn-outline" type="button" aria-pressed="false">Focus mode</button></div>
+        <details class="outline-panel"><summary>Article outline</summary><nav id="article-outline" aria-label="Article outline"><span>Add headings to build your outline.</span></nav></details>
+        <div class="admin-actions"><button id="preview-button" class="btn btn-outline" type="button">Preview</button><button id="save-draft-button" class="btn btn-outline" type="button">Save draft</button><button id="publish-button" class="btn btn-primary" type="submit">Publish post</button></div>
+      </form>
+      <aside class="admin-card seo-panel"><h2>Post settings</h2>
+        <label>Title<input id="post-title" type="text" required maxlength="120" placeholder="Post title"></label><label>Excerpt<input id="post-excerpt" type="text" required maxlength="220" placeholder="Short excerpt"></label><label>Category<input id="post-category" type="text" required maxlength="40" placeholder="Robotics"></label><label>Tags<input id="post-tags" type="text" placeholder="robotics, leadership"></label><label>Slug<input id="post-slug" type="text" placeholder="my-post-slug"></label><label>Meta title<input id="post-meta-title" type="text" maxlength="60" placeholder="SEO title"></label><label>Meta description<textarea id="post-meta-description" maxlength="160" placeholder="Search description"></textarea></label><label>Cover photo<input id="post-cover-file" type="file" accept="image/jpeg,image/png,image/webp"><input id="post-cover" type="url" placeholder="Or paste image URL"></label><div id="cover-preview" class="cover-preview"></div><label>Status<select id="post-status"><option value="draft">Draft</option><option value="published">Published</option><option value="scheduled">Scheduled</option><option value="archived">Archived</option></select></label><label>Publish date<input id="post-publish-date" type="datetime-local"></label><label class="check-label"><input id="post-featured" type="checkbox"> Featured post</label><input id="editing-id" type="hidden">
+      </aside>
+    </div>
+    <div class="admin-card posts-manager"><div class="admin-toolbar"><h2>Manage posts</h2><button id="new-post-button" class="btn btn-outline" type="button">New post</button></div><div id="posts-manager-list"></div></div>
+  </div>
+  <p id="admin-status" class="blog-status" role="status"></p>
+</div></section></main>
+<dialog id="preview-dialog" class="preview-dialog"><button class="dialog-close" type="button">×</button><article id="preview-content"></article></dialog>
+<script src="firebase-config.js"></script><script type="module" src="admin.js?v=studio1"></script>
+</body>
+</html>

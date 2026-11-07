@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Syed Hashir Ali</title>
+<meta name="description" content="Notes from Syed Hashir Ali on robotics, engineering, leadership, and building in public.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html">SYED HASHIR <span>ALI</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="journey.html">Journey</a></li>
+      <li><a href="media.html">Media</a></li><li><a href="experience.html">Experience</a></li><li><a href="certifications.html">Certificates</a></li>
+      <li><a href="blog.html" class="active" aria-current="page">Blog</a></li><li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero blog-hero">
+    <div class="wrap">
+      <div class="eyebrow">From the workbench</div>
+      <h1>Ideas, lessons,<br><span>and field notes.</span></h1>
+      <p>Writing about robotics, computer science, leadership, and the people who make ambitious projects possible.</p>
+    </div>
+  </section>
+  <section class="blog-section">
+    <div class="wrap">
+      <div id="featured-post"></div>
+      <div class="blog-filters"><input id="blog-search" type="search" placeholder="Search posts…" aria-label="Search posts"><select id="blog-category" aria-label="Filter by category"><option value="">All categories</option></select></div>
+      <div id="blog-status" class="blog-status" role="status">Loading posts…</div>
+      <div id="blog-grid" class="blog-grid" aria-live="polite"></div>
+      <button id="blog-load-more" class="btn btn-outline blog-load-more" type="button" hidden>Load more</button>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><div class="foot-grid"><div><h2>Let's build something.</h2><p class="home-footer__copy">Open to robotics collaborations, event partnerships, and technical opportunities.</p></div><div class="foot-links"><a href="mailto:ahashir541@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/syedhashiraly" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/ahashir541" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="copyright">© 2026 Syed Hashir Ali. Built with intent.</div></div></footer>
+
+<script src="main.js"></script>
+<script src="firebase-config.js"></script>
+<script type="module" src="blog.js"></script>
+</body>
+</html>
