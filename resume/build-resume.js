@@ -37,7 +37,11 @@ const work = data.work
 const projects = data.projects
   .map((p) => {
     const title = p.url ? `\\href{${p.url}}{${esc(p.name)}}` : esc(p.name);
-    return `\\project{${title}}{${p.keywords.map(esc).join(", ")}}\n${items(p.highlights)}`;
+    // keywords = written by hand; aiKeywords = built with AI assistance
+    const own = (p.keywords || []).map(esc).join(", ");
+    const ai = (p.aiKeywords || []).length ? `AI-assisted: ${p.aiKeywords.map(esc).join(", ")}` : "";
+    const tech = [own, ai].filter(Boolean).join(" $\\cdot$ ");
+    return `\\project{${title}}{${tech}}\n${items(p.highlights)}`;
   })
   .join("\n");
 
