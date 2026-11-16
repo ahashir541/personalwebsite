@@ -1,0 +1,121 @@
+{
+  "basics": {
+    "name": "Syed Hashir Ali",
+    "label": "Computer Science Student · Robotics & Event Leadership",
+    "email": "ahashir541@gmail.com",
+    "location": "Karachi, Pakistan",
+    "profiles": [
+      { "network": "LinkedIn", "username": "syedhashiraly", "url": "https://www.linkedin.com/in/syedhashiraly" },
+      { "network": "GitHub", "username": "ahashir541", "url": "https://github.com/ahashir541" }
+    ],
+    "summary": "Computer Science student at GU Tech and two-time FIRST Global Challenge representative for Team Pakistan. Experienced in robotics, full-stack web development, event operations, and educational outreach; enjoys turning ambitious ideas into organized, working systems with a team."
+  },
+  "education": [
+    { "institution": "GU Tech (Ghazali University of Technology)", "area": "BS Computer Science", "location": "Karachi", "startDate": "Jun 2026", "endDate": "Sep 2030 (expected)" },
+    { "institution": "The Lab School", "area": "A-Levels: Computer Science, Mathematics, Physics", "location": "Karachi", "startDate": "Jul 2024", "endDate": "Jun 2026" },
+    { "institution": "IBA Grads (Chaajao)", "area": "ECAT Engineering Preparation", "location": "Karachi", "startDate": "Oct 2025", "endDate": "Jun 2026" },
+    { "institution": "The Lab School", "area": "O-Levels: Pre-Engineering", "location": "Karachi", "startDate": "Mar 2021", "endDate": "Jun 2024" }
+  ],
+  "work": [
+    {
+      "position": "Educational Outreach Representative", "organization": "GU Tech", "startDate": "Aug 2026", "endDate": "Sep 2026",
+      "highlights": [
+        "Guided prospective students on academic pathways and tracked applicant progress through the admissions pipeline.",
+        "Summarized applicant feedback, communication logs, and status updates to support faculty and management decisions.",
+        "Coordinated between applicants, professors, and university leadership to streamline outreach workflows."
+      ]
+    },
+    {
+      "position": "Vice President, Event Operations & Branding Lead (ROBOTRON '26)", "organization": "SRET, The Lab School", "startDate": "Oct 2025", "endDate": "Mar 2026",
+      "highlights": [
+        "Led planning and delivery of an inter-house robotics and innovation competition for 50+ teams.",
+        "Built the event execution plan and directed branding, visual identity, and presentation standards.",
+        "Coordinated logistics, vendors, students, staff, and volunteers from setup through closing."
+      ]
+    },
+    {
+      "position": "Head of Volunteers", "organization": "Zeeshan Usmani Events", "startDate": "Jan 2026", "endDate": "Jan 2026",
+      "highlights": [
+        "Led a 12-person volunteer team across two events with 450+ and 600+ attendees.",
+        "Managed entry flow, seating, and backstage logistics as on-site contact for organizers and attendees."
+      ]
+    },
+    {
+      "position": "Marketing & Creative Support", "organization": "10x Digital Ventures", "startDate": "Oct 2024", "endDate": "Jan 2026",
+      "highlights": [
+        "Supported personal branding, market research, brand strategy, and social media management.",
+        "Produced copywriting, graphic design, presentations, and video editing; assisted with LinkedIn optimization and PR."
+      ]
+    },
+    {
+      "position": "STEM Program & Social Media Manager", "organization": "Experimenterz", "startDate": "Jan 2022", "endDate": "Jan 2023",
+      "highlights": [
+        "Assisted with STEM activities, 3D modeling and printing workshops, and summer camps; managed the social media calendar."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Recon: Month-End Reconciliation Web App", "keywords": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+      "highlights": [
+        "Multi-client app that imports bank, gateway, and platform statements, proves completeness, and matches sales to payments and payouts.",
+        "Exception-driven review with preparer/reviewer sign-off, period locking, and an Excel audit pack."
+      ]
+    },
+    {
+      "name": "MedFlow Pharmacy ERP", "keywords": ["React", "TypeScript", "FastAPI", "PostgreSQL", "Supabase", "Tauri"],
+      "highlights": [
+        "Multi-pharmacy ERP migrating from a Streamlit prototype to a Turborepo monorepo with web, admin, and desktop apps.",
+        "Row-level security, MFA-protected operator console, and PIN-based staff sign-in via Edge Functions."
+      ]
+    },
+    {
+      "name": "GUTECH LMS Portal", "keywords": ["React", "Vite", "Express", "Supabase", "Vercel"], "url": "https://gutech-lms-portal.vercel.app",
+      "highlights": [
+        "Full-stack learning management system with student, faculty, and admin roles, deployed on Vercel."
+      ]
+    },
+    {
+      "name": "WayMed: Healthcare Navigation Prototype", "keywords": ["Python", "React", "Machine Learning"],
+      "highlights": [
+        "Design-thinking prototype with guided intake, explainable department suggestions, and indoor routing in English, Urdu, and Sindhi."
+      ]
+    },
+    {
+      "name": "Personal Portfolio Website", "keywords": ["HTML", "CSS", "JavaScript", "Firebase", "LaTeX"],
+      "highlights": [
+        "Static portfolio with a Firebase-powered blog and admin studio; this resume is generated from JSON into LaTeX and offered as a download."
+      ]
+    },
+    {
+      "name": "FIRST Global Challenge Robots (Team Pakistan)", "keywords": ["Robotics", "Hardware Integration", "Sensors"],
+      "highlights": [
+        "Geneva 2022 (Carbon Capture): built the competition robot in three months; team reached the 8th Alliance.",
+        "Singapore 2023 (Hydrogen Horizons): represented Pakistan again, collaborating with international teams."
+      ]
+    }
+  ],
+  "awards": [
+    { "title": "Certificate of Excellence, FIRST Global Challenge", "awarder": "FIRST Global", "date": "Geneva 2022, Singapore 2023" },
+    { "title": "Award for Judging, Robothon 2.0 (Track The Line)", "awarder": "Align STEM Club & The Elixir School", "date": "Apr 2025" },
+    { "title": "Certificate of Appreciation, Head of Volunteers", "awarder": "Zeeshan Usmani Events", "date": "2026" }
+  ],
+  "certificates": [
+    { "name": "CS50: Introduction to Programming with Scratch", "issuer": "Harvard" },
+    { "name": "Python Programming Workshop", "issuer": "GU Tech" },
+    { "name": "Fundamentals of Digital Marketing", "issuer": "Google Digital Garage" },
+    { "name": "Ways to Build a Better LinkedIn Profile", "issuer": "Coursera Project Network" },
+    { "name": "WordPress Masterclass", "issuer": "Alison" },
+    { "name": "Robotics League 5.0", "issuer": "Edvon" }
+  ],
+  "skills": [
+    { "name": "Programming", "keywords": ["Python", "JavaScript", "TypeScript", "HTML/CSS", "SQL", "XML", "LaTeX"] },
+    { "name": "Frameworks & Tools", "keywords": ["React", "Next.js", "Node.js/Express", "FastAPI", "Supabase", "Firebase", "Git", "Vercel", "Odoo"] },
+    { "name": "Robotics", "keywords": ["Robot building", "Hardware integration", "Sensor calibration", "3D modeling & printing"] },
+    { "name": "Leadership & Creative", "keywords": ["Event operations", "Volunteer leadership", "Outreach", "Graphic design", "Video editing", "Copywriting"] }
+  ],
+  "languages": [
+    { "language": "English", "fluency": "Fluent" },
+    { "language": "Urdu", "fluency": "Native" }
+  ]
+}
