@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — Syed Hashir Ali</title>
+<meta name="description" content="Portfolio of Syed Hashir Ali: Software engineering projects, international robotics competitions, leadership experience, and verified certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .portfolio-section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+  .portfolio-section:last-of-type { border-bottom: none; }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 32px; }
+  .p-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .2s ease, border-color .2s ease; }
+  .p-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .p-card__image { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 5px; margin-bottom: 18px; border: 1px solid var(--border); }
+  .p-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .p-card p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+  .p-meta { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; display: block; }
+  .cert-scan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 32px; }
+  .cert-thumb { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--text); display: block; transition: transform .2s ease; }
+  .cert-thumb:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .cert-thumb img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #fff; border-bottom: 1px solid var(--border); }
+  .cert-thumb-body { padding: 16px; }
+  .cert-thumb-body h4 { font-size: 15px; margin-bottom: 4px; }
+  .cert-thumb-body span { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html">SYED HASHIR <span>ALI</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Portfolio & Achievements</div>
+      <h1>Combining international robotics, leadership & software engineering.</h1>
+      <p>Combining international robotics representations, large-scale event leadership, professional apprenticeships, technical certifications, and software engineering projects.</p>
+      <div class="btn-row" style="margin-top:24px;">
+        <a class="btn btn-primary" href="resume/Syed_Hashir_Ali_Resume.pdf" download>Download Resume (PDF) <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-outline" href="HASHIR PORTFOLIO.pdf" download>Download Master Portfolio (PDF) <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: SOFTWARE ENGINEERING PROJECTS -->
+  <section class="portfolio-section">
+    <div class="wrap">
+      <div class="eyebrow">Technical Works</div>
+      <h2>Software Engineering & Apps</h2>
+      <p style="color:var(--muted); max-width:650px; margin-top:8px;">Real-world applications built with modern web stacks, databases, and automated workflows.</p>
+      <div class="portfolio-grid">
+        <div class="p-card">
+          <img class="p-card__image" src="assets/images/teampakforswitzerland.jpg" alt="Team Pakistan representing Pakistan at the FIRST Global Challenge in Geneva">
+          <div>
+            <span class="p-meta">Founder · Deployed Product</span>
+            <h3>MedFlow / Nuskha</h3>
+            <p>A pharmacy ERP and inventory management software started in August 2026. Deployed and actively used at a real pharmacy in Pakistan. Built with a robust backend, frontend, Streamlit demo, docker-compose, and Supabase database. Features customer/supplier credit (Udhaar) tracking and cloud-local sync.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Supabase</span><span class="tag">Docker</span><span class="tag">Streamlit</span><span class="tag">ERP</span></div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">Live Web App · Civil Hospital Karachi</span>
+            <h3>WayMed (Guidance Network)</h3>
+            <p>A smart hospital navigation website originating from design-thinking research. Features multi-language support (English, Urdu, Sindhi with RTL), interactive floor-plan routing, QR slips with live queue status, appointment booking, and a voice assistant constrained against medical advice.</p>
+          </div>
+          <div>
+            <div class="tag-row" style="margin-bottom:14px;"><span class="tag">Docker</span><span class="tag">Render</span><span class="tag">Fly.io</span><span class="tag">UI/UX</span></div>
+            <a href="https://waymed-nvfl.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; font-size:13px; text-decoration:none;">Visit Live App ↗</a>
+          </div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">Financial Tool</span>
+            <h3>Recon (Month-End Reconciliation)</h3>
+            <p>A web application built to automatically match and reconcile monthly sales records, payment gateway transactions, and bank statements. Currently used locally for financial record-keeping.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">Web App</span><span class="tag">Automation</span></div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">Personal Platform</span>
+            <h3>Syed Hashir Ali — Portfolio Website</h3>
+            <p>This very website (syedhashir.online), showcasing my professional journey, robotics deployments, media appearances, and technical credentials, built with responsive modern web design.</p>
+          </div>
+          <div class="tag-row"><span class="tag">HTML5 / CSS3</span><span class="tag">JavaScript</span><span class="tag">Responsive</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INTERNATIONAL ROBOTICS & COMPETITIONS -->
+  <section class="portfolio-section">
+    <div class="wrap">
+      <div class="eyebrow">Global Stage</div>
+      <h2>International Robotics & Competitions</h2>
+      <p style="color:var(--muted); max-width:650px; margin-top:8px;">Representing Pakistan in world-class robotics arenas and leading large-scale national events.</p>
+
+      <div class="portfolio-grid">
+        <div class="p-card">
+          <img class="p-card__image" src="assets/images/teampakforswitzerland.jpg" alt="Team Pakistan representing Pakistan at the FIRST Global Challenge in Geneva">
+          <div>
+            <span class="p-meta">Geneva, Switzerland · Oct 2022</span>
+            <h3>FIRST Global Challenge — Carbon Capture</h3>
+            <p>Engineered and calibrated hardware and sensors for Team Pakistan's competition robot. Designed to collect simulated carbon emissions, deliver them to corner compressors, and secure long-term storage by parking or hanging on cantilevered bars. Secured a position in the 8th Alliance.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Hardware Integration</span><span class="tag">Sensor Calibration</span><span class="tag">Mechanical Assembly</span></div>
+        </div>
+
+        <div class="p-card">
+          <img class="p-card__image" src="assets/images/teampakforsingapore.jpg" alt="Team Pakistan at the FIRST Global Challenge in Singapore">
+          <div>
+            <span class="p-meta">Singapore · Oct 2023</span>
+            <h3>FIRST Global Challenge — Hydrogen Horizons</h3>
+            <p>Collaborated with international teams from 190+ countries under competitive pressure to optimize robotic logic and solve global engineering challenges through technology and coopertition.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Robotic Logic</span><span class="tag">Sensor Programming</span><span class="tag">Int'l Collaboration</span></div>
+        </div>
+
+        <div class="p-card">
+          <img class="p-card__image" src="assets/images/makingerobot.jpg" alt="Syed Hashir Ali working on a robotics project">
+          <div>
+            <span class="p-meta">Vice President SRET</span>
+            <h3>ROBOTRON ’26</h3>
+            <p>Led end-to-end strategic planning, vendor coordination, visual branding, and on-ground execution for a mega-scale robotics competition uniting 50+ competing teams and 600+ attendees.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Event Management</span><span class="tag">Leadership</span><span class="tag">Operations</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PROFESSIONAL EXPERIENCE -->
+  <section class="portfolio-section">
+    <div class="wrap">
+      <div class="eyebrow">Career & Leadership</div>
+      <h2>Professional Experience</h2>
+      <p style="color:var(--muted); max-width:650px; margin-top:8px;">Roles spanning education outreach, live-event operations, and digital marketing support.</p>
+
+      <div class="portfolio-grid">
+        <div class="p-card">
+          <div>
+            <span class="p-meta">GU Tech · Aug — Sep 2026</span>
+            <h3>Educational Outreach Representative</h3>
+            <p>Guided prospective students on academic pathways, managed applicant progress, synthesized feedback for faculty, and streamlined admissions communication workflows.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Admissions</span><span class="tag">Communication</span><span class="tag">Outreach</span></div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">Zeeshan Usmani Events · Jan 2026</span>
+            <h3>Head of Volunteers</h3>
+            <p>Directed a 12-person volunteer crew managing 600+ attendees across major event sessions. Handled entry flow, seating logistics, and real-time problem-solving under pressure.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Team Leadership</span><span class="tag">Logistics</span><span class="tag">Event Ops</span></div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">10x Digital Ventures · May 2024 — Present</span>
+            <h3>Marketing & Creative Support</h3>
+            <p>Executed digital growth strategies, personal branding campaigns, copywriting, graphic design, video editing, PR coordination, and financial marketing reconciliation.</p>
+          </div>
+          <div class="tag-row"><span class="tag">Content Creation</span><span class="tag">PR</span><span class="tag">Social Media</span></div>
+        </div>
+
+        <div class="p-card">
+          <div>
+            <span class="p-meta">Experimenterz & Al-Burhan · 2021 — 2023</span>
+            <h3>STEM Program & Workshop Assistant</h3>
+            <p>Assisted with hands-on STEM learning, introductory robotics, 3D printing workshops, summer camps, and student engagement activities.</p>
+          </div>
+          <div class="tag-row"><span class="tag">STEM Education</span><span class="tag">3D Printing</span><span class="tag">Workshops</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: CERTIFICATIONS & CREDENTIALS -->
+  <section class="portfolio-section">
+    <div class="wrap">
+      <div class="eyebrow">Verified Credentials</div>
+      <h2>Certificates & Recognition</h2>
+      <p style="color:var(--muted); max-width:650px; margin-top:8px;">Original certificates and course completions in robotics, digital marketing, and web development.</p>
+
+      <div class="cert-scan-grid">
+        <a class="cert-thumb" href="assets/certificates/first-global-geneva-2022-certificate.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/first-global-geneva-2022-certificate.png" alt="FIRST Global Geneva 2022 Certificate">
+          <div class="cert-thumb-body">
+            <h4>FIRST Global Geneva 2022</h4>
+            <span>Certificate of Excellence · Dean Kamen</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/first-global-singapore-2023-certificate.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/first-global-singapore-2023-certificate.png" alt="FIRST Global Singapore 2023 Certificate">
+          <div class="cert-thumb-body">
+            <h4>FIRST Global Singapore 2023</h4>
+            <span>Certificate of Excellence · Team Pakistan</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/robothon-2-judging-award-2025.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/robothon-2-judging-award-2025.png" alt="Robothon 2.0 Award for Judging">
+          <div class="cert-thumb-body">
+            <h4>Robothon 2.0 Judging</h4>
+            <span>Align STEM Club & The Elixir School</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/head-of-volunteers-2026-certificate.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/head-of-volunteers-2026-certificate.png" alt="Head of Volunteers Certificate">
+          <div class="cert-thumb-body">
+            <h4>Head of Volunteers</h4>
+            <span>Zeeshan Usmani Events</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/coursera-linkedin-optimization.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/coursera-linkedin-optimization.png" alt="Coursera LinkedIn Optimization">
+          <div class="cert-thumb-body">
+            <h4>LinkedIn Optimization</h4>
+            <span>Coursera Project Network</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/google-digital-marketing.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/google-digital-marketing.png" alt="Google Digital Marketing Certificate">
+          <div class="cert-thumb-body">
+            <h4>Digital Marketing</h4>
+            <span>Google Digital Garage</span>
+          </div>
+        </a>
+
+        <a class="cert-thumb" href="assets/certificates/alison-wordpress-masterclass.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/certificates/alison-wordpress-masterclass.png" alt="WordPress Masterclass Certificate">
+          <div class="cert-thumb-body">
+            <h4>WordPress Masterclass</h4>
+            <span>Alison · CPD Certified</span>
+          </div>
+        </a>
+
+        <div class="cert-thumb">
+          <div class="cert-thumb-body" style="min-height:130px;">
+            <h4>Edvon Robotics League 5.0</h4>
+            <span>Robotics training and competition credential · Listed in the portfolio</span>
+          </div>
+        </div>
+
+        <div class="cert-thumb">
+          <div class="cert-thumb-body" style="min-height:130px;">
+            <h4>CS50: Introduction to Programming with Scratch</h4>
+            <span>Harvard CS50 · Programming certificate</span>
+          </div>
+        </div>
+
+        <div class="cert-thumb">
+          <div class="cert-thumb-body" style="min-height:130px;">
+            <h4>Python Programming Workshop</h4>
+            <span>GU Tech · Additional technical credential</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Let's build something.</h2>
+        <p style="color:var(--muted); max-width:420px;">Open to robotics collaborations, event partnerships, and technical opportunities.</p>
+      </div>
+      <div class="foot-links">
+        <a href="mailto:ahashir541@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/syedhashiraly" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/ahashir541" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Syed Hashir Ali. Built with intent.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
